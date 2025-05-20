@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>动态样式修改示例</title>
+    <style>
+        .cl {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;  /* 修正边框单位 */
+            margin: 0 auto;
+            text-align: center;     /* 文本居中 */
+            line-height: 300px;    /* 垂直居中 */
+            font-size: 40px;        /* 初始字体大小 */
+            transition: all 0.3s;    /* 添加过渡动画 */
+        }
+        #button {
+            cursor: pointer;       /* 按钮手型指针 */
+            padding: 8px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cl">
+        520 I
+        <input type="button" 
+               value="修改样式" 
+               onclick="changel()" 
+               id="button"
+        />
+    </div>
+
+    <script>
+        function changel() {
+            const div = document.querySelector(".cl");
+            
+            // 修改内容与样式
+            div.innerHTML = "爱你朋友❤️"; 
+            div.style.fontSize = "100px";
+            div.style.backgroundColor = "pink";
+            div.style.color = "red";
+            div.style.borderRadius = "50%";  // 圆形效果
+            
+            // 隐藏按钮
+            document.getElementById("button").style.display = "none";
+        }
+    </script>
+</body>
+</html>
